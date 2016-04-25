@@ -1,15 +1,15 @@
 {
-  "name": "status-of-post",
+  "name": "jser-status-of-post",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azu/status-of-post.git"
+    "url": "git+https://github.com/jser/status-of-post.git"
   },
   "author": "azu",
   "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/azu/status-of-post",
+  "homepage": "https://github.com/jser/status-of-post",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/azu/status-of-post/issues"
+    "url": "https://github.com/jser/status-of-post/issues"
   },
   "version": "1.0.0",
   "description": "Status of JSer.info",
