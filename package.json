@@ -14,13 +14,20 @@
   "version": "1.0.0",
   "description": "Status of JSer.info",
   "main": "index.js",
+  "bin": {
+    "status-of-post": "bin/status-of-post.js"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "status": "update-jser-stat && node lib/status-of-post.js"
+    "build": "browserify lib/app.js -o build.js",
+    "status": "update-jser-stat && node bin/status-of-post.js"
   },
   "dependencies": {
     "jser-stat": "^2.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
   }
 }
