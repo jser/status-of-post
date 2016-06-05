@@ -1,8 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // LICENSE : MIT
 "use strict";
-const JSerStat = require("jser-stat").JSerStat;
-const calcStatus = require("./status-of-post");
+var JSerStat = require("jser-stat").JSerStat;
+var calcStatus = require("./status-of-post");
 function fetchURL(URL) {
     return new Promise(function (resolve, reject) {
         var req = new XMLHttpRequest();
@@ -38,11 +38,11 @@ function getStat() {
 }
 
 function main() {
-    const average = document.getElementById("average");
-    const median = document.getElementById("median");
-    const current = document.getElementById("current");
+    var average = document.getElementById("average");
+    var median = document.getElementById("median");
+    var current = document.getElementById("current");
     getStat().then(function (stat) {
-        const results = calcStatus(stat);
+        var results = calcStatus(stat);
         average.textContent = "平均値:" + results.average;
         median.textContent = "中央値:" + results.median;
         current.textContent = "現在値:" + results.current;
@@ -81,14 +81,14 @@ function median(arr) {
     }
 
     return (temp[half - 1] + temp[half]) / 2;
-};
+}
 module.exports = function calcData(stat) {
-    const jSerWeeks = stat.getJSerWeeks();
-    const latestWeek = jSerWeeks[jSerWeeks.length - 1];
-    const now = new Date();
-    const endDate = latestWeek.endDate;
-    const unpublishedItems = stat.findItemsBetween(endDate, now);
-    const itemCountList = jSerWeeks.map(function (week) {
+    var jSerWeeks = stat.getJSerWeeks();
+    var latestWeek = jSerWeeks[jSerWeeks.length - 1];
+    var now = new Date();
+    var endDate = latestWeek.endDate;
+    var unpublishedItems = stat.findItemsBetween(endDate, now);
+    var itemCountList = jSerWeeks.map(function (week) {
         return week.items.length;
     });
     return {
