@@ -1,14 +1,9 @@
 # jser-status-of-post
 
-JSer.infoの更新タイミングを知るCLI
+JSer.infoの更新タイミングを知るウェブサイト
 
-## Usage
-
-    $ git clone
-    $ npm run status
-    平均値:21.317518248175183
-    中央値:21
-    現在値:16
+- Web: https://jser.info/status-of-post/
+- API: https://github.com/jser/status-api
 
 ## Contributing
 
