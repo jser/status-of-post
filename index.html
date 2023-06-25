@@ -20,18 +20,18 @@
             padding: 0;
         }
 
-        @media screen and (max-width: 200px) {
-            #js-main .stats-listItem:has(span:not(#current)) {
-                display: none;
-            }
+        /* ?widget show only current */
+        .widget .stats-listItem:has(span:not(#current)) {
+            display: none;
+        }
 
-            #js-main .stats-listItem > label {
-                display: none;
-            }
-            .stats-listItem {
-                /* Fit to screen size */
-                font-size: 3rem;
-            }
+        .widget .stats-listItem > label {
+            display: none;
+        }
+
+        .widget .stats-listItem {
+            /* Fit to screen size */
+            font-size: 5rem;
         }
     </style>
 </head>
