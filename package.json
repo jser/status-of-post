@@ -21,13 +21,11 @@
     "test": "test"
   },
   "scripts": {
-    "build": "browserify lib/app.js -o build.js",
     "status": "update-jser-stat && node bin/status-of-post.js"
   },
   "dependencies": {
-    "jser-stat": "^2.1.0"
+    "jser-stat": "^4.0.3"
   },
   "devDependencies": {
-    "browserify": "^13.0.1"
   }
 }

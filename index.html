@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Status of Posts</title>
-    <script src="build.js"></script>
+    <title>JSer.info Status of Posts</title>
+    <script src="./lib/app.js" type="module"></script>
+    <!-- When display on mobile, show only #current -->
+    <style>
+        /* Center box */
+        #js-main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        /* Fit font size */
+        #js-main ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 200px) {
+            #js-main .stats-listItem:has(span:not(#current)) {
+                display: none;
+            }
+
+            #js-main .stats-listItem > label {
+                display: none;
+            }
+            .stats-listItem {
+                /* Fit to screen size */
+                font-size: 3rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="js-main">
-    <ul>
-        <li id="average">平均値:</li>
-        <li id="median">中央値:</li>
-        <li id="current">現在値:</li>
+    <ul class="stats-list">
+        <li class="stats-listItem"><label>平均値:</label><span id="average"></span></li>
+        <li class="stats-listItem"><label>中央値:</label><span id="median"></span></li>
+        <li class="stats-listItem"><label>現在値:</label><span id="current"></span></li>
     </ul>
 </div>
 </body>
