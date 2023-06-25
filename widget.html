@@ -19,14 +19,17 @@
             list-style: none;
             padding: 0;
         }
+
+        .widget .stats-listItem {
+            /* Fit to screen size */
+            font-size: 5rem;
+        }
     </style>
 </head>
-<body>
+<body class="widget">
 <div id="js-main">
     <ul class="stats-list">
-        <li class="stats-listItem"><label>平均値:</label><span id="average"></span></li>
-        <li class="stats-listItem"><label>中央値:</label><span id="median"></span></li>
-        <li class="stats-listItem"><label>現在値:</label><span id="current"></span></li>
+        <li class="stats-listItem"><span id="current"></li>
     </ul>
 </div>
 </body>
