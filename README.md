@@ -3,7 +3,9 @@
 JSer.infoの更新タイミングを知るウェブサイト
 
 - Web: https://jser.info/status-of-post/
+- Widget mode: https://jser.info/status-of-post/?widget
 - API: https://github.com/jser/status-api
+
 
 ## Contributing
 
