@@ -6,31 +6,25 @@
     <script src="./lib/app.js" type="module"></script>
     <!-- When display on mobile, show only #current -->
     <style>
-        /* Center box */
+        html, body, #js-main {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Center of center */
         #js-main {
             width: 100%;
             display: flex;
             justify-content: center;
-            font-size: 2rem;
-        }
-
-        /* Fit font size */
-        #js-main ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .widget .stats-listItem {
-            /* Fit to screen size */
-            font-size: 5rem;
+            align-items: center;
+            font-size: 100vw;
         }
     </style>
 </head>
 <body class="widget">
 <div id="js-main">
-    <ul class="stats-list">
-        <li class="stats-listItem"><span id="current"></li>
-    </ul>
+    <span id="current"></span>
 </div>
 </body>
 </html>
